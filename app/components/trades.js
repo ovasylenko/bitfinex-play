@@ -8,7 +8,8 @@ import { format } from 'd3-format'
 import { timeFormat } from 'd3-time-format'
 
 const formatDecimal = format('.2f');
-const formatDate = timeFormat('%Y %B %d %H:%M:%S')
+const formatDate = timeFormat('%H:%M:%S')
+const formatGroup = timeFormat('%Y %B %d')
 
 class Trades extends React.Component {
   componentWillMount() {
@@ -19,6 +20,30 @@ class Trades extends React.Component {
 
   render() {
     // return this.props.children;
+    const grouped = this.props.trades.reduce((acc, rec) => {
+      acc[formatGroup(rec.date)] = acc[formatGroup(rec.date)]
+        ? acc[formatGroup(rec.date)].concat([rec])
+        : [rec];
+      return acc
+    }, {});
+    const keys = Object.keys(grouped);
+    const getTrades = trades => trades.map((trade) => {
+      return (
+        <tr
+          key={trade.id}
+          className={
+            classnames({
+              red: trade.rate < 0,
+              green: trade.rate >= 0
+            })
+          }
+        >
+          <td>{formatDate(trade.date)}</td>
+          <td>{formatDecimal(trade.price)}</td>
+          <td>{formatDecimal(trade.rate)}</td>
+        </tr>
+      )
+    })
     return (
       <>
         <table className="table table-sm text-left">
@@ -28,23 +53,18 @@ class Trades extends React.Component {
               <td>Price</td>
               <td>Rate</td>
             </tr>
-            { this.props.trades.map((trade) => {
-              return (
-                <tr
-                  key={trade.id}
-                  className={
-                    classnames({
-                      red: trade.rate < 0,
-                      green: trade.rate >= 0
-                    })
+            {
+              keys.map((key) => {
+                return (<>
+                  <tr>
+                    <td colSpan="3">{key}</td>
+                  </tr>
+                  {
+                    getTrades(grouped[key])
                   }
-                >
-                  <td>{formatDate(trade.date)}</td>
-                  <td>{formatDecimal(trade.price)}</td>
-                  <td>{formatDecimal(trade.rate)}</td>
-                </tr>
-              )
-            })
+                </>
+                )
+              })
             }
           </tbody>
         </table>
