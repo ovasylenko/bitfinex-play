@@ -1,0 +1,36 @@
+{
+  "head":{
+    "login":{
+      "title": "Sila Masuk"   
+    },
+    "applications":{
+      "title": "Aplikasi Yang Tersedia"
+    },
+    "about":{
+      "title": "About"
+    }
+  },
+  "navbar":{
+    "dashboard": "Papan Pemuka",
+    "about": "Tentang"
+  },
+  "login": {
+    "login_form":{
+      "welcome": "Welcome {{name}} to our localized app!",
+      "username": "Nama pengguna",
+      "password": "Kata laluan",
+      "login_button": "Submit",
+      "signup_button": "Daftar",
+      "login_now": "Masuk Sekarang"
+    }
+  },
+  "user_profile": {
+    "title": "Your Profile"  
+  },
+  "nav":{
+    "linkRu":"Rusia",
+    "linkEn":"Bahasa Inggeris",
+    "linkMy":"Malaysian",
+    "linkZh":"Cina"
+  }
+}

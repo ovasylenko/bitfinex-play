@@ -1,0 +1,41 @@
+{
+  "head":{
+    "login":{
+      "title": "Please Login"   
+    },
+    "applications":{
+      "title": "Available Applications"
+    },
+    "about":{
+      "title": "About"
+    },
+    "profile":{
+      "title": "Profile"
+    }
+  },
+  "navbar":{
+    "dashboard": "Dashboard",
+    "about": "About",
+    "profile": "Profile",
+    "home": "Home"
+  },
+  "login": {
+    "login_form":{
+      "welcome": "Welcome {{name}} to our localized app!",
+      "username": "Username",
+      "password": "Password",
+      "login_button": "Submit",
+      "signup_button": "Sign Up",
+      "login_now": "Login Now"
+    }
+  },
+  "user_profile": {
+    "title": "Your Profile"  
+  },
+  "nav":{
+    "linkRu":"Russian",
+    "linkEn":"English",
+    "linkMy":"Malaysian",
+    "linkZh":"Chinese"
+  }
+}

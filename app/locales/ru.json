@@ -1,0 +1,41 @@
+{  
+  "head":{
+    "login":{
+      "title": "Пожалуйста Авторатизируйтесь"
+    },
+    "applications":{
+      "title": "Доступные приложения"
+    },
+    "about":{
+      "title": "О Нас"
+    },
+    "profile":{
+      "title": "Профиль"
+    }
+  },  
+  "navbar":{
+    "dashboard": "Панель Управления",
+    "about": "О Нас",
+    "profile": "Профиль",
+    "home": "Главная"
+  },
+  "login": {
+    "login_form":{
+      "welcome": "Добро пожаловать, {{name}}!",
+      "username": "Имя пользователя",
+      "password": "Пароль",
+      "login_button": "Вход",
+      "signup_button": "Регистрация",
+      "login_now": "Войти"
+    }
+  },
+  "user_profile": {
+    "title": "Профиль"  
+  },
+  "nav":{
+    "linkRu":"Русский",
+    "linkEn":"Английский",
+    "linkMy":"Малазийский",
+    "linkZh":"Китайский"
+  }
+}

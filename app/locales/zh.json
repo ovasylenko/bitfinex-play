@@ -1,0 +1,37 @@
+{
+  "head":{
+    "login":{
+      "title": "请登录"   
+    },
+    "applications":{
+      "title": "可用应用程序"
+    },
+    "about":{
+      "title": "About"
+    }
+  },
+  "navbar":{
+    "dashboard": "Dashboard",
+    "about": "About"
+  },
+  "login": {
+    "login_form":{
+      "welcome": "Welcome {{name}} to our localized app!",
+      "username": "用户名",
+      "password": "密码",
+      "login_button": "提交",
+      "signup_button": "注册",
+      "login_now": "立即登录"
+    }
+  },
+
+  "user_profile": {
+    "title": "Your Profile"  
+  },
+  "nav":{
+    "linkRu":"俄罗斯",
+    "linkEn":"英语",
+    "linkMy":"马来西亚",
+    "linkZh":"中国"
+  }
+}
